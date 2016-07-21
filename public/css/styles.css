@@ -1,0 +1,94 @@
+.section {
+  height: 100px;
+  margin: 10px;
+  background-color: blue; }
+
+.header {
+  position: relative;
+  left: 0;
+  right: 0;
+  height: 65px; }
+
+.logo {
+  background-color: black;
+  box-sizing: border-box;
+  display: block;
+  width: 50%;
+  height: 65px; }
+
+.title {
+  color: white;
+  background-color: black;
+  font-size: 60px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 65px;
+  width: 50%; }
+
+.first-block {
+  background-color: green; }
+
+.second-block {
+  background-color: yellow; }
+
+/**
+ * Media Query para celular
+ * Solo se esconde el sidebar
+ */
+@media screen and (max-width: 480px) and (min-width: 0px) {
+  /**  
+   * Esconder sidebar
+   */
+  .sidebar {
+    visibility: hidden;
+    float: left; } }
+
+/** BLOQUE PARA TABLETS **/
+@media screen and (max-width: 767px) and (min-width: 481px) {
+  .logo {
+    width: 100%; }
+  .title {
+    visibility: hidden; }
+  .sidebar {
+    position: absolute;
+    left: 0;
+    top: 73px;
+    bottom: 0;
+    width: 178px;
+    color: white;
+    background-color: red; }
+  .main {
+    position: absolute;
+    left: 178px;
+    top: 73px;
+    right: 0;
+    bottom: 0; }
+  .row-1 {
+    position: relative; }
+  .first-block {
+    box-sizing: border-box;
+    display: block;
+    width: 45%; }
+  .second-block {
+    position: absolute;
+    right: 0px;
+    bottom: -10px;
+    width: 45%; } }
+
+/** Media query para escritorio */
+@media screen and (min-width: 768px) {
+  .sidebar {
+    position: absolute;
+    left: 0;
+    top: 73px;
+    bottom: 0;
+    width: 178px;
+    color: white;
+    background-color: red; }
+  .main {
+    position: absolute;
+    left: 178px;
+    top: 73px;
+    right: 0;
+    bottom: 0; } }
